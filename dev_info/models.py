@@ -21,7 +21,6 @@ class OutputDev( models.Model ):
     cartridge_id = models.PositiveIntegerField()
     print_mode = models.CharField( max_length=255 )
 
-<<<<<<< HEAD
     class Meta:
         ordering = ['-dev_id']
 
