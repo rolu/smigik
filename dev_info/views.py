@@ -100,7 +100,7 @@ def edit( request ):
                 dev.model = cd['model']
                 dev.expl_start_date = cd['expl_start_date']
                 dev.scan_mode = cd['scan_mode']
-            if type == 'output':
+           if type == 'output':
                 dev = OutputDev.objects.get( dev_id=dev_id )
                 dev.model = cd['model']
                 dev.expl_start_date = cd['expl_start_date']
