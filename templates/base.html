@@ -1,0 +1,32 @@
+{% load static %}
+{% get_static_prefix as STATIC_PREFIX %}
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+<head>
+    <title>{% block title %}{% endblock %}</title>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link type="text/css" rel="stylesheet" href="{{ STATIC_PREFIX }}css/jquery.notice.css">
+    <link type="text/css" rel="stylesheet" href="{{ STATIC_PREFIX }}css/base.css">
+    {% block css_tags %}{% endblock %}
+    
+    <script type="text/javascript" src="{{ STATIC_PREFIX }}js/jquery-1.4.4.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_PREFIX }}js/jquery.notice.js"></script>
+    <script type="text/javascript" src="{{ STATIC_PREFIX }}js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="{{ STATIC_PREFIX }}js/jquery.form.js"></script>
+    <script type="text/javascript" src="{{ STATIC_PREFIX }}js/jquery-ajax_singleton-0.0.1.js"></script>
+    <script type="text/javascript" src="{{ STATIC_PREFIX }}js/base.js"></script>
+    {% block script_tags %}{% endblock %}
+</head>
+<body>
+	{% include "script/_noscript.html" %}
+	{% include "script/_script_start.html" %}
+		{% include "menu/_menu.html" %}
+		{% block content %}{% endblock %}
+		{% block footer %}{% endblock %}
+	{% include "script/_script_end.html" %}	
+</body>
+</html>
+				
