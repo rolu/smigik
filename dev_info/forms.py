@@ -13,4 +13,4 @@ class OutputDevForm( forms.Form ):
     print_mode = forms.CharField( max_length=255, label='Режим печати' )
 
 class PaperForm( forms.Form ):
-    paper_type = forms.CharField( max_length=255, label='Тип бумаги для принтера')
+    paper_type = forms.CharField( max_length=255, label='Бумага для принтера')
